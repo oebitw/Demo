@@ -52,7 +52,8 @@
         </footer>
         
 
-
+        <p id="1">Click the button to display a time-based greeting:</p>
+        <button onclick="myFunction()">Try it</button>
 
         <script>
             var txt;
@@ -65,10 +66,16 @@
            
         
         
-            var person = prompt("Please enter your name", "");
-            console.log(person);
-            alert(person);
-            document.write (person);
+                 var person = prompt("Please enter your name", "");
+                 console.log(person);
+                 alert(person);
+                 document.write (person);
+                 function myFunction() {
+                 var hour = new Date().getHours(); 
+                 var greeting;
+                 if (hour < 18) {greeting = "Good day";} else {greeting = "Good evening";}
+                 document.getElementById("1").innerHTML = greeting;}
+            
         </script>
 
 
